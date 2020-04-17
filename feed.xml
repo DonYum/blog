@@ -1,4 +1,257 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://donyum.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://donyum.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-17T03:29:34-05:00</updated><id>https://donyum.github.io/blog/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://donyum.github.io/blog/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://donyum.github.io/blog/jupyter/2020/02/20/test</id><content type="html" xml:base="https://donyum.github.io/blog/jupyter/2020/02/20/test.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://donyum.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://donyum.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-04-17T04:44:27-05:00</updated><id>https://donyum.github.io/blog/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Test Docx</title><link href="https://donyum.github.io/blog/2020/04/17/test-docx.html" rel="alternate" type="text/html" title="Test Docx" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>https://donyum.github.io/blog/2020/04/17/test-docx</id><content type="html" xml:base="https://donyum.github.io/blog/2020/04/17/test-docx.html">&lt;h1 id=&quot;lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-nunc-ac-faucibus-odio&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus odio.&lt;/h1&gt;
+
+&lt;p&gt;Vestibulum neque massa, scelerisque sit amet ligula eu, congue molestie mi. Praesent ut varius sem. Nullam at porttitor arcu, nec lacinia nisi. Ut ac dolor vitae odio interdum condimentum. &lt;strong&gt;Vivamus dapibus sodales ex, vitae malesuada ipsum cursus convallis. Maecenas sed egestas nulla, ac condimentum orci.&lt;/strong&gt; Mauris diam felis, vulputate ac suscipit et, iaculis non est. Curabitur semper arcu ac ligula semper, nec luctus nisl blandit. Integer lacinia ante ac libero lobortis imperdiet. &lt;em&gt;Nullam mollis convallis ipsum, ac accumsan nunc vehicula vitae.&lt;/em&gt; Nulla eget justo in felis tristique fringilla. Morbi sit amet tortor quis risus auctor condimentum. Morbi in ullamcorper elit. Nulla iaculis tellus sit amet mauris tempus fringilla.&lt;/p&gt;
+
+&lt;p&gt;Maecenas mauris lectus, lobortis et purus mattis, blandit dictum tellus.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Maecenas non lorem quis tellus placerat varius.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Nulla facilisi.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;span class=&quot;underline&quot;&gt;Aenean congue fringilla justo ut aliquam.&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://products.office.com/en-us/word&quot;&gt;&lt;span class=&quot;underline&quot;&gt;Mauris id ex erat.&lt;/span&gt;&lt;/a&gt; Nunc vulputate neque vitae justo facilisis, non condimentum ante sagittis.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Morbi viverra semper lorem nec molestie.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Maecenas tincidunt est efficitur ligula euismod, sit amet ornare est vulputate.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In non mauris justo. Duis vehicula mi vel mi pretium, a viverra erat efficitur. Cras aliquam est ac eros varius, id iaculis dui auctor. Duis pretium neque ligula, et pulvinar mi placerat et. Nulla nec nunc sit amet nunc posuere vestibulum. Ut id neque eget tortor mattis tristique. Donec ante est, blandit sit amet tristique vel, lacinia pulvinar arcu. Pellentesque scelerisque fermentum erat, id posuere justo pulvinar ut. Cras id eros sed enim aliquam lobortis. Sed lobortis nisl ut eros efficitur tincidunt. Cras justo mi, porttitor quis mattis vel, ultricies ut purus. Ut facilisis et lacus eu cursus.&lt;/p&gt;
+
+&lt;p&gt;In eleifend velit vitae libero sollicitudin euismod. Fusce vitae vestibulum velit. Pellentesque vulputate lectus quis pellentesque commodo. Aliquam erat volutpat. Vestibulum in egestas velit. Pellentesque fermentum nisl vitae fringilla venenatis. Etiam id mauris vitae orci maximus ultricies.&lt;/p&gt;
+
+&lt;h1 id=&quot;cras-fringilla-ipsum-magna-in-fringilla-dui-commodo-a&quot;&gt;Cras fringilla ipsum magna, in fringilla dui commodo a.&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Lorem ipsum&lt;/td&gt;
+      &lt;td&gt;Lorem ipsum&lt;/td&gt;
+      &lt;td&gt;Lorem ipsum&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;In eleifend velit vitae libero sollicitudin euismod.&lt;/td&gt;
+      &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Cras fringilla ipsum magna, in fringilla dui commodo a.&lt;/td&gt;
+      &lt;td&gt;Ipsum&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Aliquam erat volutpat.&lt;/td&gt;
+      &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Fusce vitae vestibulum velit.&lt;/td&gt;
+      &lt;td&gt;Lorem&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Etiam vehicula luctus fermentum.&lt;/td&gt;
+      &lt;td&gt;Ipsum&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Etiam vehicula luctus fermentum. In vel metus congue, pulvinar lectus vel, fermentum dui. Maecenas ante orci, egestas ut aliquet sit amet, sagittis a magna. Aliquam ante quam, pellentesque ut dignissim quis, laoreet eget est. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ullamcorper justo sapien, in cursus libero viverra eget. Vivamus auctor imperdiet urna, at pulvinar leo posuere laoreet. Suspendisse neque nisl, fringilla at iaculis scelerisque, ornare vel dolor. Ut et pulvinar nunc. Pellentesque fringilla mollis efficitur. Nullam venenatis commodo imperdiet. Morbi velit neque, semper quis lorem quis, efficitur dignissim ipsum. Ut ac lorem sed turpis imperdiet eleifend sit amet id sapien.&lt;/p&gt;
+
+&lt;h1 id=&quot;lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/h1&gt;
+
+&lt;p&gt;Nunc ac faucibus odio. Vestibulum neque massa, scelerisque sit amet ligula eu, congue molestie mi. Praesent ut varius sem. Nullam at porttitor arcu, nec lacinia nisi. Ut ac dolor vitae odio interdum condimentum. Vivamus dapibus sodales ex, vitae malesuada ipsum cursus convallis. Maecenas sed egestas nulla, ac condimentum orci. Mauris diam felis, vulputate ac suscipit et, iaculis non est. Curabitur semper arcu ac ligula semper, nec luctus nisl blandit. Integer lacinia ante ac libero lobortis imperdiet. Nullam mollis convallis ipsum, ac accumsan nunc vehicula vitae. Nulla eget justo in felis tristique fringilla. Morbi sit amet tortor quis risus auctor condimentum. Morbi in ullamcorper elit. Nulla iaculis tellus sit amet mauris tempus fringilla.&lt;/p&gt;
+
+&lt;h2 id=&quot;maecenas-mauris-lectus-lobortis-et-purus-mattis-blandit-dictum-tellus&quot;&gt;Maecenas mauris lectus, lobortis et purus mattis, blandit dictum tellus.&lt;/h2&gt;
+
+&lt;p&gt;Maecenas non lorem quis tellus placerat varius. Nulla facilisi. Aenean congue fringilla justo ut aliquam. Mauris id ex erat. Nunc vulputate neque vitae justo facilisis, non condimentum ante sagittis. Morbi viverra semper lorem nec molestie. Maecenas tincidunt est efficitur ligula euismod, sit amet ornare est vulputate.&lt;/p&gt;
+
+&lt;p&gt;In non mauris justo. Duis vehicula mi vel mi pretium, a viverra erat efficitur. Cras aliquam est ac eros varius, id iaculis dui auctor. Duis pretium neque ligula, et pulvinar mi placerat et. Nulla nec nunc sit amet nunc posuere vestibulum. Ut id neque eget tortor mattis tristique. Donec ante est, blandit sit amet tristique vel, lacinia pulvinar arcu. Pellentesque scelerisque fermentum erat, id posuere justo pulvinar ut. Cras id eros sed enim aliquam lobortis. Sed lobortis nisl ut eros efficitur tincidunt. Cras justo mi, porttitor quis mattis vel, ultricies ut purus. Ut facilisis et lacus eu cursus.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-eleifend-velit-vitae-libero-sollicitudin-euismod&quot;&gt;In eleifend velit vitae libero sollicitudin euismod.&lt;/h2&gt;
+
+&lt;p&gt;Fusce vitae vestibulum velit. Pellentesque vulputate lectus quis pellentesque commodo. Aliquam erat volutpat. Vestibulum in egestas velit. Pellentesque fermentum nisl vitae fringilla venenatis. Etiam id mauris vitae orci maximus ultricies. Cras fringilla ipsum magna, in fringilla dui commodo a.&lt;/p&gt;
+
+&lt;p&gt;Etiam vehicula luctus fermentum. In vel metus congue, pulvinar lectus vel, fermentum dui. Maecenas ante orci, egestas ut aliquet sit amet, sagittis a magna. Aliquam ante quam, pellentesque ut dignissim quis, laoreet eget est. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ullamcorper justo sapien, in cursus libero viverra eget. Vivamus auctor imperdiet urna, at pulvinar leo posuere laoreet. Suspendisse neque nisl, fringilla at iaculis scelerisque, ornare vel dolor. Ut et pulvinar nunc. Pellentesque fringilla mollis efficitur. Nullam venenatis commodo imperdiet. Morbi velit neque, semper quis lorem quis, efficitur dignissim ipsum. Ut ac lorem sed turpis imperdiet eleifend sit amet id sapien.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://DonYum.github.io/blog/assets/img/2020-04-17-test-docx/media/image1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus odio.</summary></entry><entry><title type="html">Test Docx Invoice Result Document</title><link href="https://donyum.github.io/blog/2020/04/17/test-docx-invoice-result-document.html" rel="alternate" type="text/html" title="Test Docx Invoice Result Document" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>https://donyum.github.io/blog/2020/04/17/test-docx-invoice-result-document</id><content type="html" xml:base="https://donyum.github.io/blog/2020/04/17/test-docx-invoice-result-document.html">&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;&lt;img src=&quot;assets/img/2020-04-17-test-docx-invoice-result-document/media/image1.png&quot; style=&quot;width:1.73937in;height:0.68741in&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Plumsail LLC&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3 Main St.New York NY 97203 USA&lt;/p&gt;
+&lt;p&gt;sales@sample.com&lt;/p&gt;
+&lt;p&gt;202-555-0131&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;&lt;p&gt;Invoice &lt;strong&gt;432&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2018-05-21&lt;/p&gt;
+&lt;p&gt;Payment Terms: 30 days&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Product&lt;/th&gt;
+      &lt;th&gt;Quantity&lt;/th&gt;
+      &lt;th&gt;Unit Price ($)&lt;/th&gt;
+      &lt;th&gt;Total cost ($)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Monitor&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;990&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Stepler&lt;/td&gt;
+      &lt;td&gt;1000&lt;/td&gt;
+      &lt;td&gt;12.44&lt;/td&gt;
+      &lt;td&gt;12440&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Fridge&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;4219.99&lt;/td&gt;
+      &lt;td&gt;4219.99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Microwave&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;99.99&lt;/td&gt;
+      &lt;td&gt;499.95&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pen&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+      &lt;td&gt;7.23&lt;/td&gt;
+      &lt;td&gt;723&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Invoice total: $18872.94&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Payment Details&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bank Name&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bank/Sort Code:&lt;/strong&gt; 32-75-97&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Account Number:&lt;/strong&gt; 28270761&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IBAN:&lt;/strong&gt; 973547&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BIC:&lt;/strong&gt; 220197&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Payment Reference:&lt;/strong&gt; INV 432&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Other Information&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/img/2020-04-17-test-docx-invoice-result-document/media/image2.jpeg&quot; style=&quot;width:1.34722in;height:0.79167in&quot; alt=&quot;data-url-image.jpeg&quot; /&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Payments should be made by bank transfer.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Plumsail LLC 3 Main St.New York NY 97203 USA sales@sample.com 202-555-0131</summary></entry><entry><title type="html">docker添加GPU支持</title><link href="https://donyum.github.io/blog/markdown/2020/04/17/docker-with-GPU-support.html" rel="alternate" type="text/html" title="docker添加GPU支持" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>https://donyum.github.io/blog/markdown/2020/04/17/docker-with-GPU-support</id><content type="html" xml:base="https://donyum.github.io/blog/markdown/2020/04/17/docker-with-GPU-support.html">&lt;h1 id=&quot;起因&quot;&gt;起因&lt;/h1&gt;
+
+&lt;p&gt;安装pytorch的时候发现NVIDIA驱动版本太低，各种不兼容，于是从390（CUDA 8.0）升级到了430（CUDA 10.1），重启后docker挂了，于是重装、各种配置。&lt;/p&gt;
+
+&lt;p&gt;虽然过程多少有些曲折，但结果是好的——以后再也不用在GPU相关软件上抓耳挠腮了。&lt;/p&gt;
+
+&lt;p&gt;关于软件版本的选择，已经在MongoDB、werkzeug、mongoengine、pymongo、faiss、pytorch上吃过很多亏了，经验就是：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;驱动、软件版本还是尽可能使用最新稳定版！出问题后才考虑二分法回退测试。&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;遇到的坑&quot;&gt;遇到的坑&lt;/h2&gt;
+
+&lt;h2 id=&quot;nvidia-docker安装&quot;&gt;nvidia-docker安装&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker#quickstart&quot;&gt;nvidia-docker安装方法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker/wiki#setting-up&quot;&gt;nvidia-docker WIKI&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;docker-compose的支持&quot;&gt;docker-compose的支持&lt;/h3&gt;
+
+&lt;h4 id=&quot;gpus选项不支持&quot;&gt;–gpus选项不支持&lt;/h4&gt;
+
+&lt;p&gt;docker最新版本0.19使用&lt;code class=&quot;highlighter-rouge&quot;&gt;--gpus [all/N]&lt;/code&gt;选项可以原生支持GPU资源：&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run --gpus all nvidia/cuda:10.0-base nvidia-smi&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;但是&lt;a href=&quot;https://forums.docker.com/t/how-to-use-gpus-option-with-docker-compose/78558&quot;&gt;docker-compose不支持该选项&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;所以这条路走不通。&lt;/p&gt;
+
+&lt;h4 id=&quot;使用runtime方式&quot;&gt;使用runtime方式&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;测试runtime的方法：&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run --runtime=nvidia nvidia/cuda:10.0-base nvidia-smi&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;添加nvidia runtime：&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/docker/daemon.json&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  {
+      &quot;runtimes&quot;: {
+          &quot;nvidia&quot;: {
+              &quot;path&quot;: &quot;/usr/bin/nvidia-container-runtime&quot;,
+              &quot;runtimeArgs&quot;: []
+          }
+      }
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;然后重启服务。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;docker-compose.yml&lt;/p&gt;
+
+    &lt;p&gt;需要注意两点：只有2.3版本支持runtime选项，设置&lt;code class=&quot;highlighter-rouge&quot;&gt;runtime: nvidia&lt;/code&gt;。Demo：&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ cat docker-compose.yml
+  version: '2.3'
+
+  services:
+  nvidia-smi-test:
+  runtime: nvidia
+  image: nvidia/cuda:9.2-runtime-centos7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;参考：https://github.com/docker/compose/issues/6691&lt;/p&gt;</content><author><name></name></author><summary type="html">起因</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://donyum.github.io/blog/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://donyum.github.io/blog/jupyter/2020/02/20/test</id><content type="html" xml:base="https://donyum.github.io/blog/jupyter/2020/02/20/test.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
