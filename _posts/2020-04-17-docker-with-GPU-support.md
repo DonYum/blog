@@ -6,7 +6,7 @@ categories: [markdown]
 title: docker添加GPU支持
 ---
 
-# 起因
+## 起因
 
 安装pytorch的时候发现NVIDIA驱动版本太低，各种不兼容，于是从390（CUDA 8.0）升级到了430（CUDA 10.1），重启后docker挂了，于是重装、各种配置。
 
@@ -69,4 +69,7 @@ docker最新版本0.19使用`--gpus [all/N]`选项可以原生支持GPU资源：
     image: nvidia/cuda:9.2-runtime-centos7
     ```
 
-参考：https://github.com/docker/compose/issues/6691
+参考：
+
+- [Support for NVIDIA GPUs under Docker Compose](https://github.com/docker/compose/issues/6691)
+- [nvidia-container-runtime](https://github.com/NVIDIA/nvidia-container-runtime#docker-engine-setup)
