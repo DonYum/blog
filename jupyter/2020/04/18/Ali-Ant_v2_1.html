@@ -1,0 +1,3607 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>异常点检测模型实验 | Yum’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="异常点检测模型实验" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="一个小测试。" />
+<meta property="og:description" content="一个小测试。" />
+<link rel="canonical" href="https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html" />
+<meta property="og:url" content="https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html" />
+<meta property="og:site_name" content="Yum’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"一个小测试。","dateModified":"2020-04-18T00:00:00-05:00","datePublished":"2020-04-18T00:00:00-05:00","headline":"异常点检测模型实验","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html"},"url":"https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://donyum.github.io/blog/feed.xml" title="Yum's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>异常点检测模型实验 | Yum’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="异常点检测模型实验" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="一个小测试。" />
+<meta property="og:description" content="一个小测试。" />
+<link rel="canonical" href="https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html" />
+<meta property="og:url" content="https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html" />
+<meta property="og:site_name" content="Yum’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"一个小测试。","dateModified":"2020-04-18T00:00:00-05:00","datePublished":"2020-04-18T00:00:00-05:00","headline":"异常点检测模型实验","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html"},"url":"https://donyum.github.io/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://donyum.github.io/blog/feed.xml" title="Yum's Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Yum&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">异常点检测模型实验</h1><p class="page-description">一个小测试。</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-18T00:00:00-05:00" itemprop="datePublished">
+        Apr 18, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/DonYum/blog/tree/master/_notebooks/2020-04-18-Ali-Ant_v2_1.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/DonYum/blog/master?filepath=_notebooks%2F2020-04-18-Ali-Ant_v2_1.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/DonYum/blog/blob/master/_notebooks/2020-04-18-Ali-Ant_v2_1.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#数据加载">数据加载 </a></li>
+<li class="toc-entry toc-h1"><a href="#数据探索">数据探索 </a></li>
+<li class="toc-entry toc-h1"><a href="#特征提取">特征提取 </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#基于事实表的特征提取">基于事实表的特征提取 </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#z-score标准化:-交易金额、年龄">z-score标准化: 交易金额、年龄 </a></li>
+<li class="toc-entry toc-h3"><a href="#OneHot——渠道">OneHot——渠道 </a></li>
+<li class="toc-entry toc-h3"><a href="#OneHot：starter_area">OneHot：starter_area </a></li>
+<li class="toc-entry toc-h3"><a href="#降维观察特征的有效性">降维观察特征的有效性 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#基于ID之间交易的特征提取">基于ID之间交易的特征提取 </a></li>
+<li class="toc-entry toc-h2"><a href="#基于ID的特征提取">基于ID的特征提取 </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#发起交易的金额总量和交易数">发起交易的金额总量和交易数 </a></li>
+<li class="toc-entry toc-h4"><a href="#接收交易的金额总量和交易数">接收交易的金额总量和交易数 </a></li>
+<li class="toc-entry toc-h4"><a href="#归一化">归一化 </a></li>
+<li class="toc-entry toc-h3"><a href="#降维观察特征有效性">降维观察特征有效性 </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#构建模型">构建模型 </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#K-means聚类模型">K-means聚类模型 </a></li>
+<li class="toc-entry toc-h2"><a href="#谱聚类模型">谱聚类模型 </a></li>
+<li class="toc-entry toc-h2"><a href="#IsolationForest方法">IsolationForest方法 </a></li>
+<li class="toc-entry toc-h2"><a href="#模型比较">模型比较 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#TODO">TODO </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-04-18-Ali-Ant_v2_1.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="c1"># import logging</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas.tseries.offsets</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># import plotly_express as px</span>
+<span class="c1"># import cufflinks as cf</span>
+
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm_notebook</span> <span class="k">as</span> <span class="n">tqdm</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="数据加载">
+<a class="anchor" href="#%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据加载<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD"> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-show</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./sample_21.txt'</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>交易时间</th>
+      <th>交易金额</th>
+      <th>转账附言</th>
+      <th>渠道</th>
+      <th>发起方id</th>
+      <th>发起方年龄</th>
+      <th>发起方所处地区</th>
+      <th>接收方ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2017-12-23 00:07:36</td>
+      <td>1989200</td>
+      <td>转账</td>
+      <td>普通转账</td>
+      <td>3655</td>
+      <td>22</td>
+      <td>广东</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2017-12-23 00:08:25</td>
+      <td>4802500</td>
+      <td>-</td>
+      <td>线下付款</td>
+      <td>2703</td>
+      <td>50</td>
+      <td>新疆</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2017-12-23 00:12:37</td>
+      <td>3254000</td>
+      <td>-</td>
+      <td>线上付款</td>
+      <td>3476</td>
+      <td>36</td>
+      <td>安徽</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2017-12-23 00:12:50</td>
+      <td>3458600</td>
+      <td>-</td>
+      <td>线下付款</td>
+      <td>6017</td>
+      <td>31</td>
+      <td>贵州</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2017-12-23 00:13:21</td>
+      <td>2085400</td>
+      <td>奖金</td>
+      <td>普通转账</td>
+      <td>1904</td>
+      <td>37</td>
+      <td>云南</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20016</th>
+      <td>2018-02-28 14:07:39</td>
+      <td>2515300</td>
+      <td>上次买的xx</td>
+      <td>跨境转账</td>
+      <td>304</td>
+      <td>23</td>
+      <td>美国</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <th>20017</th>
+      <td>2018-02-28 14:35:16</td>
+      <td>4910500</td>
+      <td>李xx给张xx的钱</td>
+      <td>普通转账</td>
+      <td>3689</td>
+      <td>32</td>
+      <td>黑龙江</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <th>20018</th>
+      <td>2018-02-28 14:40:07</td>
+      <td>3096400</td>
+      <td>李xx给张xx的钱</td>
+      <td>普通转账</td>
+      <td>320</td>
+      <td>35</td>
+      <td>上海</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>20019</th>
+      <td>2018-02-28 14:41:10</td>
+      <td>3661000</td>
+      <td>还给你</td>
+      <td>普通转账</td>
+      <td>3909</td>
+      <td>42</td>
+      <td>上海</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>20020</th>
+      <td>2018-02-28 14:45:10</td>
+      <td>3049800</td>
+      <td>奖金</td>
+      <td>跨境转账</td>
+      <td>2525</td>
+      <td>31</td>
+      <td>美国</td>
+      <td>32</td>
+    </tr>
+  </tbody>
+</table>
+<p>20021 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'time'</span><span class="p">,</span> <span class="s1">'cash_amount'</span><span class="p">,</span> <span class="s1">'comment'</span><span class="p">,</span> <span class="s1">'channel'</span><span class="p">,</span> <span class="s1">'starter_id'</span><span class="p">,</span> <span class="s1">'starter_age'</span><span class="p">,</span> <span class="s1">'starter_area'</span><span class="p">,</span> <span class="s1">'receiver_id'</span><span class="p">]</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cash_amount</th>
+      <th>starter_id</th>
+      <th>starter_age</th>
+      <th>receiver_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>2.002100e+04</td>
+      <td>20021.000000</td>
+      <td>20021.000000</td>
+      <td>20021.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2.509762e+06</td>
+      <td>3498.215674</td>
+      <td>33.934369</td>
+      <td>51.956895</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.446299e+06</td>
+      <td>2013.401076</td>
+      <td>9.564053</td>
+      <td>80.228028</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.010000e+04</td>
+      <td>1.000000</td>
+      <td>18.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.264900e+06</td>
+      <td>1754.000000</td>
+      <td>26.000000</td>
+      <td>26.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.492100e+06</td>
+      <td>3500.000000</td>
+      <td>34.000000</td>
+      <td>51.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>3.751800e+06</td>
+      <td>5238.000000</td>
+      <td>42.000000</td>
+      <td>76.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>8.888800e+06</td>
+      <td>7000.000000</td>
+      <td>88.000000</td>
+      <td>6258.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="数据探索">
+<a class="anchor" href="#%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据探索<a class="anchor-link" href="#%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2"> </a>
+</h1>
+<p>详见 <img src="ali_ant/AliAntTest_%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E5%8F%8A%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9.pdf" alt="AliAntTest_数据探索.pdf">  2  <a href="ali_ant/AliAntTest_%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E5%8F%8A%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9.pdf">AliAntTest_数据探索.pdf</a>。</p>
+<p><img src="/blog/images/copied_from_nb/ali_ant/AliAntTest_%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E5%8F%8A%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9.pdf" alt="AliAntTest_数据探索.pdf"></p>
+<p><a href="ali_ant/AliAntTest_%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E5%8F%8A%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9.pdf">AliAntTest_数据探索.pdf</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="特征提取">
+<a class="anchor" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>特征提取<a class="anchor-link" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
+</h1>
+<p>尝试从下面三个维度提取特征，并比较提取特征的优劣：</p>
+<ol>
+<li>基于事实表的特征提取</li>
+<li>基于ID之间交易的特征提取</li>
+<li>基于ID的特征提取<blockquote>
+<p>Notes:其实从数据探索过程中可以发现第3种最好，但实际场景下特征维度会非常多，所以特征提取前期应该尽可能多的探索一下。</p>
+</blockquote>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>特征提取方法：连续值用z-score归一化处理，离散值用one-hot方法做稀疏处理。</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="基于事实表的特征提取">
+<a class="anchor" href="#%E5%9F%BA%E4%BA%8E%E4%BA%8B%E5%AE%9E%E8%A1%A8%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于事实表的特征提取<a class="anchor-link" href="#%E5%9F%BA%E4%BA%8E%E4%BA%8B%E5%AE%9E%E8%A1%A8%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
+</h2>
+<p>可用于构造特征的维度有：</p>
+<ul>
+<li>交易金额；</li>
+<li>交易数量；</li>
+<li>发起地区；</li>
+<li>年龄；</li>
+<li>渠道；</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="z-score标准化:-交易金额、年龄">
+<a class="anchor" href="#z-score%E6%A0%87%E5%87%86%E5%8C%96:-%E4%BA%A4%E6%98%93%E9%87%91%E9%A2%9D%E3%80%81%E5%B9%B4%E9%BE%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>z-score标准化: 交易金额、年龄<a class="anchor-link" href="#z-score%E6%A0%87%E5%87%86%E5%8C%96:-%E4%BA%A4%E6%98%93%E9%87%91%E9%A2%9D%E3%80%81%E5%B9%B4%E9%BE%84"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_score_scaler</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">z_score_feature</span> <span class="o">=</span> <span class="n">z_score_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'cash_amount'</span><span class="p">,</span> <span class="s1">'starter_age'</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">z_score_feature</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'cash_amount'</span><span class="p">,</span> <span class="s1">'starter_age'</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cash_amount</th>
+      <th>starter_age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.359936</td>
+      <td>-1.247867</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.585284</td>
+      <td>1.679835</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.514594</td>
+      <td>0.215984</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.656062</td>
+      <td>-0.306820</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.293420</td>
+      <td>0.320545</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20016</th>
+      <td>0.003829</td>
+      <td>-1.143306</td>
+    </tr>
+    <tr>
+      <th>20017</th>
+      <td>1.659959</td>
+      <td>-0.202259</td>
+    </tr>
+    <tr>
+      <th>20018</th>
+      <td>0.405623</td>
+      <td>0.111423</td>
+    </tr>
+    <tr>
+      <th>20019</th>
+      <td>0.796009</td>
+      <td>0.843349</td>
+    </tr>
+    <tr>
+      <th>20020</th>
+      <td>0.373402</td>
+      <td>-0.306820</td>
+    </tr>
+  </tbody>
+</table>
+<p>20021 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OneHot——渠道">
+<a class="anchor" href="#OneHot%E2%80%94%E2%80%94%E6%B8%A0%E9%81%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>OneHot——渠道<a class="anchor-link" href="#OneHot%E2%80%94%E2%80%94%E6%B8%A0%E9%81%93"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ch_one_hot_enc</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">()</span>
+<span class="n">ch_one_hot_enc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'channel'</span><span class="p">]])</span>
+<span class="c1"># enc.n_values_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OneHotEncoder(categories='auto', drop=None, dtype=&lt;class 'numpy.float64'&gt;,
+              handle_unknown='error', sparse=True)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ch_one_hot_enc</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OneHotEncoder(categories='auto', drop=None, dtype=&lt;class 'numpy.float64'&gt;,
+              handle_unknown='error', sparse=True)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">ch_one_hot_enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'channel'</span><span class="p">]])</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">features</span><span class="p">[</span><span class="sa">f</span><span class="s1">'ch_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cash_amount</th>
+      <th>starter_age</th>
+      <th>ch_0</th>
+      <th>ch_1</th>
+      <th>ch_2</th>
+      <th>ch_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.359936</td>
+      <td>-1.247867</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.585284</td>
+      <td>1.679835</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.514594</td>
+      <td>0.215984</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.656062</td>
+      <td>-0.306820</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.293420</td>
+      <td>0.320545</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20016</th>
+      <td>0.003829</td>
+      <td>-1.143306</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20017</th>
+      <td>1.659959</td>
+      <td>-0.202259</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>20018</th>
+      <td>0.405623</td>
+      <td>0.111423</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>20019</th>
+      <td>0.796009</td>
+      <td>0.843349</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>20020</th>
+      <td>0.373402</td>
+      <td>-0.306820</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>20021 rows × 6 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OneHot：starter_area">
+<a class="anchor" href="#OneHot%EF%BC%9Astarter_area" aria-hidden="true"><span class="octicon octicon-link"></span></a>OneHot：starter_area<a class="anchor-link" href="#OneHot%EF%BC%9Astarter_area"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">area_one_hot_enc</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">()</span>
+<span class="n">area_one_hot_enc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'starter_area'</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OneHotEncoder(categories='auto', drop=None, dtype=&lt;class 'numpy.float64'&gt;,
+              handle_unknown='error', sparse=True)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">area_one_hot_enc</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OneHotEncoder(categories='auto', drop=None, dtype=&lt;class 'numpy.float64'&gt;,
+              handle_unknown='error', sparse=True)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">area_one_hot_enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'starter_area'</span><span class="p">]])</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">features</span><span class="p">[</span><span class="sa">f</span><span class="s1">'area_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cash_amount</th>
+      <th>starter_age</th>
+      <th>ch_0</th>
+      <th>ch_1</th>
+      <th>ch_2</th>
+      <th>ch_3</th>
+      <th>area_0</th>
+      <th>area_1</th>
+      <th>area_2</th>
+      <th>area_3</th>
+      <th>...</th>
+      <th>area_11</th>
+      <th>area_12</th>
+      <th>area_13</th>
+      <th>area_14</th>
+      <th>area_15</th>
+      <th>area_16</th>
+      <th>area_17</th>
+      <th>area_18</th>
+      <th>area_19</th>
+      <th>area_20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.359936</td>
+      <td>-1.247867</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.585284</td>
+      <td>1.679835</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.514594</td>
+      <td>0.215984</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.656062</td>
+      <td>-0.306820</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.293420</td>
+      <td>0.320545</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20016</th>
+      <td>0.003829</td>
+      <td>-1.143306</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20017</th>
+      <td>1.659959</td>
+      <td>-0.202259</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20018</th>
+      <td>0.405623</td>
+      <td>0.111423</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>20019</th>
+      <td>0.796009</td>
+      <td>0.843349</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>20020</th>
+      <td>0.373402</td>
+      <td>-0.306820</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>20021 rows × 27 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="降维观察特征的有效性">
+<a class="anchor" href="#%E9%99%8D%E7%BB%B4%E8%A7%82%E5%AF%9F%E7%89%B9%E5%BE%81%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>降维观察特征的有效性<a class="anchor-link" href="#%E9%99%8D%E7%BB%B4%E8%A7%82%E5%AF%9F%E7%89%B9%E5%BE%81%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipyvolume</span> <span class="k">as</span> <span class="nn">ipv</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+
+<span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">tsne</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 12min 31s, sys: 222 ms, total: 12min 31s
+Wall time: 1min 29s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">features</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">df_res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">_res</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_res</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>18.165588</td>
+      <td>-19.010647</td>
+      <td>1.458440</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.450019</td>
+      <td>-1.731154</td>
+      <td>-32.102139</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-14.175321</td>
+      <td>3.815895</td>
+      <td>-3.988426</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-5.928217</td>
+      <td>-7.826748</td>
+      <td>-10.185696</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>13.656402</td>
+      <td>5.804957</td>
+      <td>-2.203535</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20016</th>
+      <td>-4.421280</td>
+      <td>-13.237238</td>
+      <td>13.659069</td>
+    </tr>
+    <tr>
+      <th>20017</th>
+      <td>-0.839358</td>
+      <td>-8.010888</td>
+      <td>-3.395279</td>
+    </tr>
+    <tr>
+      <th>20018</th>
+      <td>12.696962</td>
+      <td>1.771047</td>
+      <td>9.034929</td>
+    </tr>
+    <tr>
+      <th>20019</th>
+      <td>4.095841</td>
+      <td>16.873896</td>
+      <td>3.948498</td>
+    </tr>
+    <tr>
+      <th>20020</th>
+      <td>-6.599446</td>
+      <td>-6.259656</td>
+      <td>-5.781780</td>
+    </tr>
+  </tbody>
+</table>
+<p>20021 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_res</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>20021.000000</td>
+      <td>20021.000000</td>
+      <td>20021.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.329172</td>
+      <td>-0.163093</td>
+      <td>0.102560</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>13.911817</td>
+      <td>15.107344</td>
+      <td>12.062253</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-28.235468</td>
+      <td>-34.582352</td>
+      <td>-32.145741</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-10.466891</td>
+      <td>-11.949810</td>
+      <td>-8.984593</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.032380</td>
+      <td>-0.298013</td>
+      <td>1.127379</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>11.903912</td>
+      <td>10.771826</td>
+      <td>8.706995</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>29.233423</td>
+      <td>29.592445</td>
+      <td>28.516783</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">ipyvolume</span> <span class="k">as</span> <span class="nn">ipv</span>
+
+<span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span>
+<span class="c1"># _c = [i*3 for i in pd.Categorical(df_res['id']).codes]</span>
+<span class="c1"># color = colormap(_c)</span>
+<span class="n">ipv</span><span class="o">.</span><span class="n">quickscatter</span><span class="p">(</span><span class="n">df_res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># , marker="sphere", color=color[:,:3]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/TSNE_1.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <!-- <strong>Note: </strong> -->
+    从降维后的结果可以看到：这种方法提取的特征无法区分数据。
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="基于ID之间交易的特征提取">
+<a class="anchor" href="#%E5%9F%BA%E4%BA%8EID%E4%B9%8B%E9%97%B4%E4%BA%A4%E6%98%93%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于ID之间交易的特征提取<a class="anchor-link" href="#%E5%9F%BA%E4%BA%8EID%E4%B9%8B%E9%97%B4%E4%BA%A4%E6%98%93%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
+</h2>
+<p>在数据从交易信息来看，没有明显的分布差别，所以在这里不予考虑。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="基于ID的特征提取">
+<a class="anchor" href="#%E5%9F%BA%E4%BA%8EID%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于ID的特征提取<a class="anchor-link" href="#%E5%9F%BA%E4%BA%8EID%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
+</h2>
+<p>从四个维度来提取：</p>
+<ul>
+<li>发起交易的金额总量和交易数；</li>
+<li>接收交易的金额总量和交易数；</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="发起交易的金额总量和交易数">
+<a class="anchor" href="#%E5%8F%91%E8%B5%B7%E4%BA%A4%E6%98%93%E7%9A%84%E9%87%91%E9%A2%9D%E6%80%BB%E9%87%8F%E5%92%8C%E4%BA%A4%E6%98%93%E6%95%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>发起交易的金额总量和交易数<a class="anchor-link" href="#%E5%8F%91%E8%B5%B7%E4%BA%A4%E6%98%93%E7%9A%84%E9%87%91%E9%A2%9D%E6%80%BB%E9%87%8F%E5%92%8C%E4%BA%A4%E6%98%93%E6%95%B0"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'cash_amount'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'count'</span><span class="p">,</span> <span class="s1">'sum'</span><span class="p">]}</span>
+<span class="n">starter_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'starter_id'</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">starter_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'_'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">starter_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">starter_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'s_cash_amount_count'</span><span class="p">,</span> <span class="s1">'s_cash_amount_sum'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">starter_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>s_cash_amount_count</th>
+      <th>s_cash_amount_sum</th>
+    </tr>
+    <tr>
+      <th>starter_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2764000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+      <td>18098000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>8589800</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>16682400</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>5435500</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>6996</th>
+      <td>5</td>
+      <td>9014400</td>
+    </tr>
+    <tr>
+      <th>6997</th>
+      <td>3</td>
+      <td>3548100</td>
+    </tr>
+    <tr>
+      <th>6998</th>
+      <td>1</td>
+      <td>2878000</td>
+    </tr>
+    <tr>
+      <th>6999</th>
+      <td>5</td>
+      <td>15088000</td>
+    </tr>
+    <tr>
+      <th>7000</th>
+      <td>3</td>
+      <td>9085800</td>
+    </tr>
+  </tbody>
+</table>
+<p>6583 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="接收交易的金额总量和交易数">
+<a class="anchor" href="#%E6%8E%A5%E6%94%B6%E4%BA%A4%E6%98%93%E7%9A%84%E9%87%91%E9%A2%9D%E6%80%BB%E9%87%8F%E5%92%8C%E4%BA%A4%E6%98%93%E6%95%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>接收交易的金额总量和交易数<a class="anchor-link" href="#%E6%8E%A5%E6%94%B6%E4%BA%A4%E6%98%93%E7%9A%84%E9%87%91%E9%A2%9D%E6%80%BB%E9%87%8F%E5%92%8C%E4%BA%A4%E6%98%93%E6%95%B0"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'cash_amount'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'count'</span><span class="p">,</span> <span class="s1">'sum'</span><span class="p">]}</span>
+<span class="n">receiver_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'receiver_id'</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">receiver_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'_'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">receiver_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">receiver_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'e_cash_amount_count'</span><span class="p">,</span> <span class="s1">'e_cash_amount_sum'</span><span class="p">]</span>
+<span class="n">receiver_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e_cash_amount_count</th>
+      <th>e_cash_amount_sum</th>
+    </tr>
+    <tr>
+      <th>receiver_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>202</td>
+      <td>497892400</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>179</td>
+      <td>457216300</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>201</td>
+      <td>505419500</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>214</td>
+      <td>539274100</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>222</td>
+      <td>562892800</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1434</th>
+      <td>1</td>
+      <td>8888800</td>
+    </tr>
+    <tr>
+      <th>3012</th>
+      <td>1</td>
+      <td>405300</td>
+    </tr>
+    <tr>
+      <th>4962</th>
+      <td>1</td>
+      <td>3279200</td>
+    </tr>
+    <tr>
+      <th>5916</th>
+      <td>1</td>
+      <td>4554200</td>
+    </tr>
+    <tr>
+      <th>6258</th>
+      <td>1</td>
+      <td>2977500</td>
+    </tr>
+  </tbody>
+</table>
+<p>117 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">receiver_df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">starter_df</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 填充NaN</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e_cash_amount_count</th>
+      <th>e_cash_amount_sum</th>
+      <th>s_cash_amount_count</th>
+      <th>s_cash_amount_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>202.0</td>
+      <td>497892400.0</td>
+      <td>1.0</td>
+      <td>2764000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>179.0</td>
+      <td>457216300.0</td>
+      <td>5.0</td>
+      <td>18098000.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>201.0</td>
+      <td>505419500.0</td>
+      <td>3.0</td>
+      <td>8589800.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>214.0</td>
+      <td>539274100.0</td>
+      <td>6.0</td>
+      <td>16682400.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>222.0</td>
+      <td>562892800.0</td>
+      <td>2.0</td>
+      <td>5435500.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>6996</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>9014400.0</td>
+    </tr>
+    <tr>
+      <th>6997</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>3548100.0</td>
+    </tr>
+    <tr>
+      <th>6998</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2878000.0</td>
+    </tr>
+    <tr>
+      <th>6999</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>15088000.0</td>
+    </tr>
+    <tr>
+      <th>7000</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>9085800.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>6596 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="归一化">
+<a class="anchor" href="#%E5%BD%92%E4%B8%80%E5%8C%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>归一化<a class="anchor-link" href="#%E5%BD%92%E4%B8%80%E5%8C%96"> </a>
+</h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_score_scaler</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">z_score_feature</span> <span class="o">=</span> <span class="n">z_score_scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">z_score_feature</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">features</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>8.122062</td>
+      <td>7.981598</td>
+      <td>-1.276431</td>
+      <td>-0.988593</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7.183164</td>
+      <td>7.319397</td>
+      <td>1.232125</td>
+      <td>2.134452</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8.081240</td>
+      <td>8.104138</td>
+      <td>-0.022153</td>
+      <td>0.197936</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.611921</td>
+      <td>8.655286</td>
+      <td>1.859264</td>
+      <td>1.846140</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>8.938494</td>
+      <td>9.039796</td>
+      <td>-0.649292</td>
+      <td>-0.444493</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>6996</th>
+      <td>-0.123907</td>
+      <td>-0.124019</td>
+      <td>1.232125</td>
+      <td>0.284414</td>
+    </tr>
+    <tr>
+      <th>6997</th>
+      <td>-0.123907</td>
+      <td>-0.124019</td>
+      <td>-0.022153</td>
+      <td>-0.828896</td>
+    </tr>
+    <tr>
+      <th>6998</th>
+      <td>-0.123907</td>
+      <td>-0.124019</td>
+      <td>-1.276431</td>
+      <td>-0.965374</td>
+    </tr>
+    <tr>
+      <th>6999</th>
+      <td>-0.123907</td>
+      <td>-0.124019</td>
+      <td>1.232125</td>
+      <td>1.521412</td>
+    </tr>
+    <tr>
+      <th>7000</th>
+      <td>-0.123907</td>
+      <td>-0.124019</td>
+      <td>-0.022153</td>
+      <td>0.298956</td>
+    </tr>
+  </tbody>
+</table>
+<p>6596 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="降维观察特征有效性">
+<a class="anchor" href="#%E9%99%8D%E7%BB%B4%E8%A7%82%E5%AF%9F%E7%89%B9%E5%BE%81%E6%9C%89%E6%95%88%E6%80%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>降维观察特征有效性<a class="anchor-link" href="#%E9%99%8D%E7%BB%B4%E8%A7%82%E5%AF%9F%E7%89%B9%E5%BE%81%E6%9C%89%E6%95%88%E6%80%A7"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+
+<span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">_res</span> <span class="o">=</span> <span class="n">tsne</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">_features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 3min 30s, sys: 128 ms, total: 3min 30s
+Wall time: 25.5 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">_features</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">df_res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">_res</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_res</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_res</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>-2.616519</td>
+      <td>10.399817</td>
+      <td>16.650976</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.269044</td>
+      <td>8.815780</td>
+      <td>21.424440</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>-1.138858</td>
+      <td>9.294405</td>
+      <td>19.571409</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>-0.300031</td>
+      <td>9.371153</td>
+      <td>21.505943</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>-3.027676</td>
+      <td>11.100630</td>
+      <td>18.954000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>6591</th>
+      <td>6591</td>
+      <td>9.084714</td>
+      <td>10.959700</td>
+      <td>-5.038331</td>
+    </tr>
+    <tr>
+      <th>6592</th>
+      <td>6592</td>
+      <td>-4.531178</td>
+      <td>27.202545</td>
+      <td>-1.383322</td>
+    </tr>
+    <tr>
+      <th>6593</th>
+      <td>6593</td>
+      <td>-14.335349</td>
+      <td>-15.130382</td>
+      <td>-5.814716</td>
+    </tr>
+    <tr>
+      <th>6594</th>
+      <td>6594</td>
+      <td>1.527327</td>
+      <td>-24.622822</td>
+      <td>-3.664261</td>
+    </tr>
+    <tr>
+      <th>6595</th>
+      <td>6595</td>
+      <td>-22.862921</td>
+      <td>-3.276567</td>
+      <td>5.567962</td>
+    </tr>
+  </tbody>
+</table>
+<p>6596 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">ipyvolume</span> <span class="k">as</span> <span class="nn">ipv</span>
+
+<span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span>
+<span class="c1"># _c = [i*3 for i in pd.Categorical(df_res['id']).codes]</span>
+<span class="c1"># color = colormap(_c)</span>
+<span class="n">ipv</span><span class="o">.</span><span class="n">quickscatter</span><span class="p">(</span><span class="n">df_res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># , marker="sphere", color=color[:,:3]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/TSNE_2.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <!-- <strong>Note: </strong> -->
+    从降维后的结果可以看到：这种方法提取的特征很容易异常数据。
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="构建模型">
+<a class="anchor" href="#%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>构建模型<a class="anchor-link" href="#%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B"> </a>
+</h1>
+<p>使用下面3种方式构建模型：</p>
+<ul>
+<li>K-means；</li>
+<li>谱聚类模型；</li>
+<li>孤立森林Isolation Forest。</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="K-means聚类模型">
+<a class="anchor" href="#K-means%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>K-means聚类模型<a class="anchor-link" href="#K-means%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">_features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 143 ms, sys: 299 ms, total: 442 ms
+Wall time: 39.2 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">ipyvolume</span> <span class="k">as</span> <span class="nn">ipv</span>
+
+<span class="n">df_res</span> <span class="o">=</span> <span class="n">_features</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1"># pd.Categorical(y_pred).codes</span>
+<span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span>
+<span class="n">_c</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">100</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">codes</span><span class="p">]</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">colormap</span><span class="p">(</span><span class="n">_c</span><span class="p">)</span>
+<span class="n">ipv</span><span class="o">.</span><span class="n">quickscatter</span><span class="p">(</span><span class="n">df_res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"sphere"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">[:,:</span><span class="mi">3</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/Kmeans_res.png" alt=""></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">_features</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">_df</span><span class="p">[</span><span class="n">_df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e_cash_amount_count</th>
+      <th>e_cash_amount_sum</th>
+      <th>s_cash_amount_count</th>
+      <th>s_cash_amount_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>202.0</td>
+      <td>497892400.0</td>
+      <td>1.0</td>
+      <td>2764000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>179.0</td>
+      <td>457216300.0</td>
+      <td>5.0</td>
+      <td>18098000.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>201.0</td>
+      <td>505419500.0</td>
+      <td>3.0</td>
+      <td>8589800.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>214.0</td>
+      <td>539274100.0</td>
+      <td>6.0</td>
+      <td>16682400.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>222.0</td>
+      <td>562892800.0</td>
+      <td>2.0</td>
+      <td>5435500.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>208.0</td>
+      <td>508578500.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>191.0</td>
+      <td>443328700.0</td>
+      <td>1.0</td>
+      <td>4635800.0</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>187.0</td>
+      <td>468610000.0</td>
+      <td>2.0</td>
+      <td>5157900.0</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>182.0</td>
+      <td>431347100.0</td>
+      <td>3.0</td>
+      <td>10525300.0</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>217.0</td>
+      <td>580785900.0</td>
+      <td>2.0</td>
+      <td>3329900.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <!-- <strong>Note: </strong> -->
+    耗时39ms，但效果很差。
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="谱聚类模型">
+<a class="anchor" href="#%E8%B0%B1%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>谱聚类模型<a class="anchor-link" href="#%E8%B0%B1%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">SpectralClustering</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">SpectralClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">_features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 19.1 s, sys: 18 s, total: 37.1 s
+Wall time: 6.64 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">ipyvolume</span> <span class="k">as</span> <span class="nn">ipv</span>
+
+<span class="n">df_res</span> <span class="o">=</span> <span class="n">_features</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1"># pd.Categorical(y_pred).codes</span>
+<span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span>
+<span class="n">_c</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">100</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">codes</span><span class="p">]</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">colormap</span><span class="p">(</span><span class="n">_c</span><span class="p">)</span>
+<span class="n">ipv</span><span class="o">.</span><span class="n">quickscatter</span><span class="p">(</span><span class="n">df_res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">df_res</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"sphere"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">[:,:</span><span class="mi">3</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">_features</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_df</span><span class="p">[</span><span class="n">_df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1137</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">_df</span><span class="p">[</span><span class="n">_df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e_cash_amount_count</th>
+      <th>e_cash_amount_sum</th>
+      <th>s_cash_amount_count</th>
+      <th>s_cash_amount_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1137</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>106665600.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/spectral_res.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <!-- <strong>Note: </strong> -->
+    耗时6.46s，效果很好。
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <!-- <strong>Note: </strong> -->
+    异常数据为：
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="IsolationForest方法">
+<a class="anchor" href="#IsolationForest%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>IsolationForest方法<a class="anchor-link" href="#IsolationForest%E6%96%B9%E6%B3%95"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">_features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">IsolationForest</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+ 
+<span class="c1"># 构造训练样本</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1">#样本总数</span>
+<span class="n">outliers_fraction</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">n_samples</span>  <span class="c1">#异常样本比例</span>
+
+<span class="n">clf</span> <span class="o">=</span> <span class="n">IsolationForest</span><span class="p">(</span><span class="n">max_samples</span><span class="o">=</span><span class="n">n_samples</span> <span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">rng</span><span class="p">,</span> <span class="n">contamination</span><span class="o">=</span><span class="n">outliers_fraction</span><span class="p">)</span>   <span class="c1"># , random_state=rng, contamination=outliers_fraction</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="c1"># y_pred_train = clf.predict(X_train)</span>
+<span class="n">scores_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">scoreatpercentile</span><span class="p">(</span><span class="n">scores_pred</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">outliers_fraction</span><span class="p">)</span>  <span class="c1">#根据训练样本中异常样本比例，得到阈值，用于绘图</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 616 ms, sys: 995 µs, total: 617 ms
+Wall time: 616 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores_pred</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.19802162, 0.08466044, 0.21168621, ..., 0.38757413, 0.38741914,
+       0.42611375])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">threshold</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5.525365321529252e-17</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scores_pred</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">_df</span><span class="p">[</span><span class="n">_df</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">threshold</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">res</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e_cash_amount_count</th>
+      <th>e_cash_amount_sum</th>
+      <th>s_cash_amount_count</th>
+      <th>s_cash_amount_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1137</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>106665600.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <!-- <strong>Note: </strong> -->
+    效果：耗时616ms，结果准确。
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="模型比较">
+<a class="anchor" href="#%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>模型比较<a class="anchor-link" href="#%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83"> </a>
+</h2>
+<p>从运行结果来看，三种模型里：</p>
+<ul>
+<li>K-Means效果最差，其余两种效果很好；</li>
+<li>谱聚类模型性能比较差，运行时间是Isolation Forest模型的6倍。</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="TODO">
+<a class="anchor" href="#TODO" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO<a class="anchor-link" href="#TODO"> </a>
+</h1>
+<ul>
+<li>降到二维/三维可视化展示聚类效果。</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="DonYum/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/jupyter/2020/04/18/Ali-Ant_v2_1.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Powered By fastpages.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/DonYum" title="DonYum"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
