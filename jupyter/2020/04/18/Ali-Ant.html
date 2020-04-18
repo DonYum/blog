@@ -131,11 +131,13 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#数据加载">数据加载 </a></li>
-<li class="toc-entry toc-h2"><a href="#特征提取">特征提取 </a>
+<li class="toc-entry toc-h1"><a href="#特征提取">特征提取 </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#基于事实表的特征提取">基于事实表的特征提取 </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#z-score标准化:-交易金额、年龄">z-score标准化: 交易金额、年龄 </a></li>
-<li class="toc-entry toc-h3"><a href="#渠道">渠道 </a></li>
-<li class="toc-entry toc-h3"><a href="#starter_area">starter_area </a></li>
+<li class="toc-entry toc-h3"><a href="#OneHot——渠道">OneHot——渠道 </a></li>
+<li class="toc-entry toc-h3"><a href="#OneHot：starter_area">OneHot：starter_area </a></li>
 <li class="toc-entry toc-h3"><a href="#降维观察特征的有效性">降维观察特征的有效性 </a></li>
 <li class="toc-entry toc-h3"><a href="#基于ID之间交易的特征提取">基于ID之间交易的特征提取 </a></li>
 </ul>
@@ -150,6 +152,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#plotly-demo">plotly demo </a></li>
 <li class="toc-entry toc-h2"><a href="#Built-in-sample-datasets">Built-in sample datasets </a></li>
 <li class="toc-entry toc-h2"><a href="#Scatter-and-Line-plots">Scatter and Line plots </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#About">About </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Front-Matter">Front Matter </a></li>
@@ -449,8 +453,17 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="特征提取">
+<h1 id="特征提取">
 <a class="anchor" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>特征提取<a class="anchor-link" href="#%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="基于事实表的特征提取">
+<a class="anchor" href="#%E5%9F%BA%E4%BA%8E%E4%BA%8B%E5%AE%9E%E8%A1%A8%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于事实表的特征提取<a class="anchor-link" href="#%E5%9F%BA%E4%BA%8E%E4%BA%8B%E5%AE%9E%E8%A1%A8%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
 </h2>
 <p>可用于构造特征的维度有：</p>
 <ul>
@@ -474,119 +487,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">'cash_amount'</span><span class="p">,</span> <span class="s1">'starter_age'</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cash_amount</th>
-      <th>starter_age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1989200</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4802500</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3254000</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3458600</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2085400</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>20016</th>
-      <td>2515300</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>20017</th>
-      <td>4910500</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th>20018</th>
-      <td>3096400</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <th>20019</th>
-      <td>3661000</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <th>20020</th>
-      <td>3049800</td>
-      <td>31</td>
-    </tr>
-  </tbody>
-</table>
-<p>20021 rows × 2 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -738,8 +638,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="渠道">
-<a class="anchor" href="#%E6%B8%A0%E9%81%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>渠道<a class="anchor-link" href="#%E6%B8%A0%E9%81%93"> </a>
+<h3 id="OneHot——渠道">
+<a class="anchor" href="#OneHot%E2%80%94%E2%80%94%E6%B8%A0%E9%81%93" aria-hidden="true"><span class="octicon octicon-link"></span></a>OneHot——渠道<a class="anchor-link" href="#OneHot%E2%80%94%E2%80%94%E6%B8%A0%E9%81%93"> </a>
 </h3>
 </div>
 </div>
@@ -1013,8 +913,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="starter_area">
-<a class="anchor" href="#starter_area" aria-hidden="true"><span class="octicon octicon-link"></span></a>starter_area<a class="anchor-link" href="#starter_area"> </a>
+<h3 id="OneHot：starter_area">
+<a class="anchor" href="#OneHot%EF%BC%9Astarter_area" aria-hidden="true"><span class="octicon octicon-link"></span></a>OneHot：starter_area<a class="anchor-link" href="#OneHot%EF%BC%9Astarter_area"> </a>
 </h3>
 </div>
 </div>
@@ -1537,11 +1437,6 @@ Wall time: 1min 29s
 <span class="n">df_res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">df_res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">df_res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="c1"># df_res['id'] = face_id.iloc[0]</span>
-
-<span class="c1"># df_res['species']=pd.Categorical(df_res['id']).codes</span>
-<span class="c1"># my_color=df_res['species']</span>
-<span class="c1"># df_res = df_res.drop('species', 1)</span>
 </pre></div>
 
     </div>
@@ -1805,37 +1700,22 @@ Wall time: 1min 29s
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">![](</span>ali_ant/TSNE_1.png<span class="o">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/bin/sh: 1: Syntax error: word unexpected (expecting ")")
-</pre>
-</div>
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/TSNE_1.png" alt=""></p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>从降维后的结果可以看到：这种方法提取的特征无法区分数据。</code></p>
 
 </div>
-    
-
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2757,23 +2637,14 @@ Wall time: 25.5 s
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">![](</span>ali_ant/TSNE_2.png<span class="o">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/ali_ant/TSNE_2.png" alt=""></p>
 
 </div>
-    
-
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
