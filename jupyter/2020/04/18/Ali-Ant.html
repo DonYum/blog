@@ -139,9 +139,9 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#OneHot——渠道">OneHot——渠道 </a></li>
 <li class="toc-entry toc-h3"><a href="#OneHot：starter_area">OneHot：starter_area </a></li>
 <li class="toc-entry toc-h3"><a href="#降维观察特征的有效性">降维观察特征的有效性 </a></li>
-<li class="toc-entry toc-h3"><a href="#基于ID之间交易的特征提取">基于ID之间交易的特征提取 </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#基于ID之间交易的特征提取">基于ID之间交易的特征提取 </a></li>
 <li class="toc-entry toc-h2"><a href="#基于ID的特征提取">基于ID的特征提取 </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#归一化">归一化 </a></li>
@@ -1719,9 +1719,9 @@ Wall time: 1min 29s
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="基于ID之间交易的特征提取">
+<h2 id="基于ID之间交易的特征提取">
 <a class="anchor" href="#%E5%9F%BA%E4%BA%8EID%E4%B9%8B%E9%97%B4%E4%BA%A4%E6%98%93%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于ID之间交易的特征提取<a class="anchor-link" href="#%E5%9F%BA%E4%BA%8EID%E4%B9%8B%E9%97%B4%E4%BA%A4%E6%98%93%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
-</h3>
+</h2>
 <p>在数据从交易信息来看，没有明显的分布差别，所以在这里不予考虑。</p>
 
 </div>
@@ -1733,6 +1733,12 @@ Wall time: 1min 29s
 <h2 id="基于ID的特征提取">
 <a class="anchor" href="#%E5%9F%BA%E4%BA%8EID%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>基于ID的特征提取<a class="anchor-link" href="#%E5%9F%BA%E4%BA%8EID%E7%9A%84%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96"> </a>
 </h2>
+<p>从四个维度来提取：</p>
+<ul>
+<li>发起交易的金额总量和交易数；</li>
+<li>接收交易的金额总量和交易数；</li>
+</ul>
+
 </div>
 </div>
 </div>
