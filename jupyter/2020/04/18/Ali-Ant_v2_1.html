@@ -549,16 +549,11 @@ window.onload = wrap_img;
 <li>
 <p>非监督学习——聚类；</p>
 <p>几种常用聚类方法的比较：</p>
+<p><img src="ali_ant/cluster_compare.png" alt=""></p>
+<p>在聚类效果上，谱聚类、DBscan的方法是非线性的，精度最优，但DBscan要探索一个阈值，灵活性低。</p>
+<p>而谱聚类方法可以通过指定cluster个数来聚类，风险监控场景可以看作二分类场景，聚类个数一定是2，所以<code>谱聚类比较贴合这个场景</code>。</p>
 </li>
 </ul>
-<p><img src="/blog/images/copied_from_nb/ali_ant/cluster_compare.png" alt=""></p>
-
-<pre><code>在聚类效果上，谱聚类、DBscan的方法是非线性的，精度最优，但DBscan要探索一个阈值，灵活性低。
-
-而谱聚类方法可以通过指定cluster个数来聚类，风险监控场景可以看作二分类场景，聚类个数一定是2，所以`谱聚类比较贴合这个场景`。
-
-
-</code></pre>
 <ul>
 <li>
 <p>监督学习——深度学习模型；</p>
