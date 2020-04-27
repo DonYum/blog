@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: 踩过的一些坑，顺便测试一下fastpages
+description: cufflinks文档
 categories: [plotly]
 title: cufflinks docs
 ---
