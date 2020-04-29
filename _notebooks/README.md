@@ -23,9 +23,18 @@ See [Writing Blog Posts With Jupyter](https://github.com/fastai/fastpages#writin
 - https://colab.research.google.com/github/github/covid19-dashboard/blob/master/_notebooks/2020-03-30-us-inflection.ipynb
 
 ```python
-#hide
+#hide_output
+# plotly-express
 from IPython.display import HTML
-fig = px.pie(by_regions, values='Confirmed', names='Region', title="Covid19 Cases distribution",color_discrete_sequence=px.colors.sequential.RdBu)
+fig = px.pie(by_regions, values='Confirmed', names='Region', title="Covid19 Cases distribution", color_discrete_sequence=px.colors.sequential.RdBu)
+fig.show()
+```
+
+```python
+#hide_output
+# cufflinks
+from IPython.display import HTML
+fig = cf.gendata.lines(4).iplot(asFigure=True)
 fig.show()
 ```
 
@@ -34,7 +43,7 @@ fig.show()
 HTML(fig.to_html())
 ```
 
-### 表格北京自动填充
+### 表格背景自动填充
 
 `df.style.background_gradient(cmap='Reds')`
 
